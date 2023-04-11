@@ -51,7 +51,7 @@ drwxrwx--- 2 Student1 Teacher 4096 Apr 11 16:35 Student1
 drwxrwx--- 2 Student2 Teacher 4096 Apr 11 16:35 Student2
 drwxrwx--- 2 Student3 Teacher 4096 Apr 11 16:35 Student3
 drwxrwx--- 2 Student4 Teacher 4096 Apr 11 16:35 Student4
-drwxrwxrwx 2 Teacher  Teacher 4096 Apr 11 16:34 Teacher
+drwxrwx--- 2 Teacher  Teacher 4096 Apr 11 16:34 Teacher
 # groups Teacher
 Teacher : Teacher Class Practice
 # groups Student1
