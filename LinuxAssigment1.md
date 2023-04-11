@@ -1,43 +1,49 @@
-#Ejercicio de Clase (Fecha de entrega 10/04/2023 23:59)
-#
-#Descripción: Se pide crear usuarios par aun profe y 5 estudiantes y tener dos grupos uno de practica y el otro de teoria, cumplir con lo siguiente: el estudiante 5 no tiene un home directory todos los estudiantes deben estar en ambos grupos y el profesor solo en practica a los home directory solo podra acceder el profesor con full permisos y no asi los otros estudiantes 
-#
-#Nota: Deben entregar un documento, por chat interno que contenga las capturas de pantalla que verifiquen los usuarios creados, la asignacion de los grupos y los permisos.
-#################################################
+Ejercicio de Clase (Fecha de entrega 10/04/2023 23:59)
+Descripción: Se pide crear usuarios par aun profe y 5 estudiantes y tener dos grupos uno de practica y el otro de teoria, cumplir con lo siguiente: el estudiante 5 no tiene un home directory todos los estudiantes deben estar en ambos grupos y el profesor solo en practica a los home directory solo podra acceder el profesor con full permisos y no asi los otros estudiantes 
+Nota: Deben entregar un documento, por chat interno que contenga las capturas de pantalla que verifiquen los usuarios creados, la asignacion de los grupos y los permisos.
+
 
 Approach:
 
 Se crean los grupos Class, Teacher, Practice, Theory
+```bash
 # sudo groupadd Class
 # sudo groupadd Teacher
 # sudo groupadd Practice
 # sudo groupadd Theory
+```
 
 Se crean los usuario y se asignan a los estudiantes el grupo principal Class y al profesor el grupo principal Teacher
 Para los grupos secundarios se asigna Practice y Theory a todos los estudiantes y para el profesor Class y Practice
+```bash
 #useradd -m -g Teacher -G Class,Practice Teacher
 #useradd -m -g Class -G Practice,Theory Student1
 #useradd -m -g Class -G Practice,Theory Student2
 #useradd -m -g Class -G Practice,Theory Student3
 #useradd -m -g Class -G Practice,Theory Student4
 #useradd -g Class -G Practice,Theory Student5
+```
 
 Se modifican los permisos de los home directories 
+```bash
 #chmod 770 Student1
 #chmod 770 Student2
 #chmod 770 Student3
 #chmod 770 Student4
 #chmod 770 Teacher
+```
 
 Se modifican los groups de los home directories
+```bash
 #chgrp Teacher Student1
 #chgrp Teacher Student2
 #chgrp Teacher Student3
 #chgrp Teacher Student4
+```
 
 Listamos los resultados:
 
-
+```bash
 
 # ls -l
 total 20
@@ -128,4 +134,4 @@ Class:x:1000:Teacher
 Practice:x:1001:Teacher,Student1,Student2,Student3,Student4,Student5
 Theory:x:1002:Student1,Student2,Student3,Student4,Student5
 Teacher:x:1003:
-# 
+```
