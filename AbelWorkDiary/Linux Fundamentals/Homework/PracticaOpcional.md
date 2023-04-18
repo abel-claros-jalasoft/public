@@ -1,5 +1,5 @@
 ## Preguntas 1, 2 y 3
-![alt text]([http://url/to/img.png](https://github.com/abel-claros-jalasoft/public/blob/main/AbelWorkDiary/Pasted%20image%2020230417181935.png))
+![alt text](https://github.com/abel-claros-jalasoft/public/blob/main/AbelWorkDiary/Pasted%20image%2020230417181935.png)
 ![[Pasted image 20230417181935.png]]
 ```bash
 abel@UbuntuLab:/home$ sudo addgroup oficina1
